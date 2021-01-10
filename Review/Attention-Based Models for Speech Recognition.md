@@ -16,7 +16,6 @@ encoder output과 곱해준 후 Generate 함수를 통해 output을 뽑아낸다
 ![Attend 함수 내부](https://user-images.githubusercontent.com/54731898/104130630-216e6100-53b5-11eb-9872-8bb685c2a404.PNG)  
 위의 사진은 Attend 함수를 더 자세하게 표현한 사진이다.
 Score 함수를 통해 score를 구해주고 softmax 함수를 통해 normalizing 해준다.   
-
 Score 함수는 여러 가지가 있는데, 
 본 논문에서 새로운 attention mechanism을 제안한다는 것은 새로운 Score 함수를 제안한다는 뜻이다.
 ### Content-Based Attention
@@ -24,7 +23,7 @@ Score 함수는 여러 가지가 있는데,
 ![content-based attention](https://user-images.githubusercontent.com/54731898/104130645-2e8b5000-53b5-11eb-9a66-00255d7b0192.PNG)  
 본 논문은 실패한 방법부터 설명하고 있는데 그 중 첫 번째 방법이 content-based attention이다.  
 이 방법은 decoder output에 weight를 곱해주고, encoder output에 weight를 곱해주고 bias와
-모두 더한 후 Hyperbolic tangent에 넣어준다.
+모두 더한 후 Hyperbolic tangent에 넣어준다.  
 그리고 나온 결과 값에 weight를 곱해주는 것이다.     
 이 방법은 이전의 attention weights를 고려해주지 않기 때문에 sequence에서 위치를 고려해주지 못한다.
 이러한 문제점을 "similar speech fragments" 라고 한다.
