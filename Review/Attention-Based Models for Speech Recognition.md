@@ -8,7 +8,7 @@
 ### General Framework
 ---
 ![general attention](https://user-images.githubusercontent.com/54731898/104130582-d94f3e80-53b4-11eb-99fc-c9450c1a5efb.PNG)  
-(본 논문에서는 α를 alignment, attention weight, g를 glimpse라고 표현한다.)
+(본 논문에서는 α를 alignment, attention weight, g를 glimpse라고 표현한다.)  
 일반적으로 attention mechanism을 이용해서 output sequence를 뽑아내는 과정이다.
 위의 사진에 있는 Attend 함수를 통해 attention weights를 뽑아내고, 
 encoder output과 곱해준 후 Generate 함수를 통해 output을 뽑아낸다.
@@ -21,7 +21,7 @@ Score 함수는 여러 가지가 있는데,
 ### Content-Based Attention
 ---
 ![content-based attention](https://user-images.githubusercontent.com/54731898/104130645-2e8b5000-53b5-11eb-9a66-00255d7b0192.PNG)  
-본 논문은 실패한 방법부터 설명하고 있는데 그 중 첫 번째 방법이 content-based attention이다.
+본 논문은 실패한 방법부터 설명하고 있는데 그 중 첫 번째 방법이 content-based attention이다.  
 이 방법은 decoder output에 weight를 곱해주고, encoder output에 weight를 곱해주고 bias와
 모두 더한 후 Hyperbolic tangent에 넣어준다.
 그리고 나온 결과 값에 weight를 곱해주는 것이다.     
@@ -31,14 +31,14 @@ Score 함수는 여러 가지가 있는데,
 ---
 ![location-based attention](https://user-images.githubusercontent.com/54731898/104130647-2fbc7d00-53b5-11eb-97b1-dc128ec2096b.PNG)  
 
-두 번째 실패한 방법은 location-based attention이다.
+두 번째 실패한 방법은 location-based attention이다.  
 이전의 attention weight와 decoder output을 고려해줌으로써 연속적인 음소사이의 거리를 예측할 수 있다. 하지만 encoder의 output을 고려해주지 않기 때문에 한계점이 존재한다.
 
 ### Hybrid Attention
 ---
 ![hybrid attention1](https://user-images.githubusercontent.com/54731898/104130658-4b278800-53b5-11eb-92c2-76b45d9c65d2.PNG)
 ![hybrid attention2](https://user-images.githubusercontent.com/54731898/104130659-4bc01e80-53b5-11eb-8d38-f519c7eeed7d.PNG)  
-위의 두 가지 방법을 섞어준 것이 hybrid attention이다.
+위의 두 가지 방법을 섞어준 것이 hybrid attention이다.  
 location-aware attention이라고도 불린다.
 이전의 attention weight에 convolution을 취해주고 나온 결과값에 weight를 곱한 후
 content-based attention식에 있는 Hyperbolic tangent 안에 같이 더해주는 방법이다.
@@ -54,7 +54,7 @@ decode할 때 각 시간당 L frames을 고려한다고 하면 시간복잡도�
 ### Sharpening
 ---
 ![sharpening1](https://user-images.githubusercontent.com/54731898/104130666-5ed2ee80-53b5-11eb-8d26-4f96e089df0a.PNG)  
-(β > 1)
+(β > 1)  
 첫 번째 문제점을 해결하기 위해 나온 방법이다.
 softmax함수에 inverse temperature β를 적용한 방법이다. 또 다른 방법으로는 top-k frames만 다시 re-normalizing 하는 것이다.  
 하지만 sharpening 방법도 시간복잡도가 O(LT)이어서 두 번째 문제점을 해결하지는 못한다.
