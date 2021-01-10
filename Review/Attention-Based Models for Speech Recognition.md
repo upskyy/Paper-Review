@@ -32,7 +32,7 @@ Score 함수는 여러 가지가 있는데,
 ![location-based attention](https://user-images.githubusercontent.com/54731898/104130647-2fbc7d00-53b5-11eb-97b1-dc128ec2096b.PNG)  
 
 두 번째 실패한 방법은 location-based attention이다.  
-이전의 attention weight와 decoder output을 고려해줌으로써 연속적인 음소사이의 거리를 예측할 수 있다. 하지만 encoder의 output을 고려해주지 않기 때문에 한계점이 존재한다.
+이전의 attention weight와 decoder output을 고려해줌으로써 연속적인 음소사이의 거리를 예측할 수 있다.   하지만 encoder의 output을 고려해주지 않기 때문에 한계점이 존재한다.
 
 ### Hybrid Attention
 ---
@@ -57,7 +57,7 @@ decode할 때 각 시간당 L frames을 고려한다고 하면 시간복잡도�
 (β > 1)  
 첫 번째 문제점을 해결하기 위해 나온 방법이다.
 softmax함수에 inverse temperature β를 적용한 방법이다. 또 다른 방법으로는 top-k frames만 다시 re-normalizing 하는 것이다.  
-하지만 sharpening 방법도 시간복잡도가 O(LT)이어서 두 번째 문제점을 해결하지는 못한다.
+하지만 sharpening 방법도 시간복잡도가 O(LT)이어서 두 번째 문제점을 해결하지는 못한다.  
 그래서 windowing 기술을 제안한다. 이전 attention weight의 중간값을 기준으로 미리 정의된 window 사이즈만큼만 고려해주는 것이다. 이 방법을 사용하면 시간복잡도를 O(L + T)로 줄일 수 있다.  
 이 windowing 기술은 top-k frames만 고려하는 것과 비슷하다.
 
