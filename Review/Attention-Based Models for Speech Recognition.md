@@ -46,9 +46,9 @@ content-based attention식에 있는 Hyperbolic tangent 안에 같이 더해주�
 ### Three potential issues about Score Normalization
 ---
 첫 번째는 input sequence가 길 때, glimpse는 encoder output으로부터 관련 없는 noisy한 정보들을 받게 된다. softmax함수는 모든 정보들을 확률 값으로 표현하여 합이 1이 되도록 해야되기 때문에 
-noisy한 정보들도 일부 확률 값을 가지게 되고, 그 결과 관련있는 정보들에 집중하기가 어려워진다.
+noisy한 정보들도 일부 확률 값을 가지게 되고, 그 결과 관련있는 정보들에 집중하기가 어려워진다.  
 두 번째는 input utterances가 길 때, 시간복잡도가 엄청나다는 것이다. output 길이가 T이고, 
-decode할 때 각 시간당 L frames을 고려한다고 하면 시간복잡도가 O(LT)이다.
+decode할 때 각 시간당 L frames을 고려한다고 하면 시간복잡도가 O(LT)이다.  
 세 번째는 softmax함수가 single vector에만 집중하기 때문에 여러 개의 top-scored frames을 고려하기가 어렵다.
 
 ### Sharpening
@@ -56,9 +56,9 @@ decode할 때 각 시간당 L frames을 고려한다고 하면 시간복잡도�
 ![sharpening1](https://user-images.githubusercontent.com/54731898/104130666-5ed2ee80-53b5-11eb-8d26-4f96e089df0a.PNG)  
 (β > 1)
 첫 번째 문제점을 해결하기 위해 나온 방법이다.
-softmax함수에 inverse temperature β를 적용한 방법이다. 또 다른 방법으로는 top-k frames만 다시 re-normalizing 하는 것이다.
+softmax함수에 inverse temperature β를 적용한 방법이다. 또 다른 방법으로는 top-k frames만 다시 re-normalizing 하는 것이다.  
 하지만 sharpening 방법도 시간복잡도가 O(LT)이어서 두 번째 문제점을 해결하지는 못한다.
-그래서 windowing 기술을 제안한다. 이전 attention weight의 중간값을 기준으로 미리 정의된 window 사이즈만큼만 고려해주는 것이다. 이 방법을 사용하면 시간복잡도를 O(L + T)로 줄일 수 있다.
+그래서 windowing 기술을 제안한다. 이전 attention weight의 중간값을 기준으로 미리 정의된 window 사이즈만큼만 고려해주는 것이다. 이 방법을 사용하면 시간복잡도를 O(L + T)로 줄일 수 있다.  
 이 windowing 기술은 top-k frames만 고려하는 것과 비슷하다.
 
 ### Smoothing
