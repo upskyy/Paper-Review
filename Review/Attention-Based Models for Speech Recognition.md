@@ -9,13 +9,14 @@
 ---
 ![general attention](https://user-images.githubusercontent.com/54731898/104130582-d94f3e80-53b4-11eb-99fc-c9450c1a5efb.PNG)  
 (본 논문에서는 α를 alignment, attention weight, g를 glimpse라고 표현한다.)  
-일반적으로 attention mechanism을 이용해서 output sequence를 뽑아내는 과정이다.
+일반적으로 attention mechanism을 이용해서 output sequence를 뽑아내는 과정이다.  
 위의 사진에 있는 Attend 함수를 통해 attention weights를 뽑아내고, 
 encoder output과 곱해준 후 Generate 함수를 통해 output을 뽑아낸다.
 
 ![Attend 함수 내부](https://user-images.githubusercontent.com/54731898/104130630-216e6100-53b5-11eb-9872-8bb685c2a404.PNG)  
 위의 사진은 Attend 함수를 더 자세하게 표현한 사진이다.
-Score 함수를 통해 score를 구해주고 softmax 함수를 통해 normalizing 해준다. 
+Score 함수를 통해 score를 구해주고 softmax 함수를 통해 normalizing 해준다.   
+
 Score 함수는 여러 가지가 있는데, 
 본 논문에서 새로운 attention mechanism을 제안한다는 것은 새로운 Score 함수를 제안한다는 뜻이다.
 ### Content-Based Attention
