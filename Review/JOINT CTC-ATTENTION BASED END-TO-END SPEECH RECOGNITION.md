@@ -56,6 +56,6 @@ loss 함수는 CTC loss 값과 attention loss 값을 적절하게 더해주어�
 CER(Character Error Rate)이 가장 낮은 것을 확인 할 수 있다.  
 
 ![g](https://user-images.githubusercontent.com/54731898/104768799-95dc4200-57b1-11eb-913f-68e62d1dfd6a.PNG)  
-CTC와 Attention 방법보다 MTL 방법이 빠르게 학습해나가는 것을 확인 할 수 있다.
+CTC와 Attention 방법보다 MTL 방법이 더 빠르게 학습해나가는 것을 확인 할 수 있다.
 
 
