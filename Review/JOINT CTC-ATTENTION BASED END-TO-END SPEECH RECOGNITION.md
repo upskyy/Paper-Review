@@ -25,7 +25,7 @@ CTC의 핵심 아이디어는 blank와 반복되는 label을 통해 가능한
 모든 label sequence 조합을 구하는 것이다.
 ![a](https://user-images.githubusercontent.com/54731898/104768730-78a77380-57b1-11eb-94ee-be13ae75fef6.PNG)  
 P(y|x)가 최대가 되도록 모델을 학습한다.  
-더 자세한 내용은 [링크](https://github.com/hasangchun/Paper-Review/blob/main/Review/Connectionist%20Temporal%20Classification.pdf)를 참고하시면 좋을 것 같습니다.  
+더 자세한 내용은 [Connectionist Temporal Classification Paper Review](https://github.com/hasangchun/Paper-Review/blob/main/Review/Connectionist%20Temporal%20Classification.pdf)를 참고하시면 좋을 것 같습니다.  
 
 
 #### 2.2 Attention-based encoder-decoder
