@@ -37,7 +37,7 @@ P(y|x)가 최대가 되도록 모델을 학습한다.
 다음과 같은 과정을 통해 attention mechanism을 구현하고, decoder에서 output을 뽑아낼 때 사용한다.
 본 논문에서는 location-based 방법이라고 적혀 있지만, location-aware 이라고 더 많이 불린다.
 이 방법이 음성인식 attention mechanism으로 많이 사용된다.  
-더 자세한 내용은 [링크](https://github.com/hasangchun/Paper-Review/blob/main/Review/Attention-Based%20Models%20for%20Speech%20Recognition.md)를 참고하시면 좋을 것 같습니다.  
+더 자세한 내용은 [Attention-Based Models for Speech Recognition Paper Review](https://github.com/hasangchun/Paper-Review/blob/main/Review/Attention-Based%20Models%20for%20Speech%20Recognition.md)를 참고하시면 좋을 것 같습니다.  
 
 #### 2.3 Proposed model: Joint CTC-attention (MTL)
 ![d](https://user-images.githubusercontent.com/54731898/104768782-91b02480-57b1-11eb-9bbe-8f99e4e5e4db.PNG)  
