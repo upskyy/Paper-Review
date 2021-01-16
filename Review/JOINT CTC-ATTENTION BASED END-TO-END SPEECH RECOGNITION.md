@@ -42,9 +42,10 @@ Encoder에서 음성 정보에 집중하고, AttentionDecoder에서 문자에 �
 
 #### 2.3 Proposed model: Joint CTC-attention (MTL)
 ![d](https://user-images.githubusercontent.com/54731898/104768782-91b02480-57b1-11eb-9bbe-8f99e4e5e4db.PNG)  
-이 모델의 아이디어는 attention model encoder를 학습하는데 보조적으로 CTC loss 함수를 사용하는 것이다. 즉, 공유되는 encoder가 CTC와 attention model에 의해 학습이 되는 것이다.
+이 모델의 아이디어는 attention model encoder를 학습하는데 보조적으로 CTC loss 함수를 사용하는 것이다. 즉, 공유되는 encoder가 CTC와 attention model 둘 다에 의해 학습이 되는 것이다.
 
 CTC의 forward-backward 알고리즘이 단조로운 alignment를 강화함으로써 noisy한 상황에서 조금 더 robust 해진다고 말하고 있다. 또 다른 이점으로는 학습이 빠르게 진행된다는 것이다.  
+
 
 ![e](https://user-images.githubusercontent.com/54731898/104768786-92e15180-57b1-11eb-9651-952dd8a8973f.PNG)  
 loss 함수는 CTC loss 값과 attention loss 값을 적절하게 더해주어서 사용한다.
@@ -61,6 +62,7 @@ CER(Character Error Rate)이 가장 낮은 것을 확인 할 수 있다.
 CTC와 Attention 방법보다 MTL 방법이 더 빠르게 학습해나가는 것을 확인 할 수 있다.
 
 ![h](https://user-images.githubusercontent.com/54731898/104813032-d5566d00-5849-11eb-83d4-953a99d055a8.PNG)  
+
 보통 음성인식이나 음성합성의 경우 alignment가 일직선인 경우가 많은데 
 Attention만 사용한 방법보다 MTL 방법이 더 잘 예측한 것을 확인 할 수 있다.
 
