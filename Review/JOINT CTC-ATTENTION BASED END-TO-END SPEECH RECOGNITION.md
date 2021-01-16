@@ -31,7 +31,9 @@ P(y|x)가 최대가 되도록 모델을 학습한다.
 #### 2.2 Attention-based encoder-decoder
 ![b](https://user-images.githubusercontent.com/54731898/104768735-7a713700-57b1-11eb-9a2e-d4ab72d7257a.PNG)  
 전반적인 구조는 Encoder와 Attention-Decoder형태로,  
-2개의 RNN으로 구성되어 있다.  
+2개의 RNN으로 구성되어 있다. 
+Encoder에서 음성 정보에 집중하고, AttentionDecoder에서 문자에 대한 확률 분포를 생성한다.
+더 자세한 내용은 [Listen, Attend and Spell Paper Review](https://github.com/hasangchun/Paper-Review/blob/main/Review/Listen%2C%20Attend%20and%20Spell.pdf)를 참고하시면 좋을 것 같습니다.
 
 ![c](https://user-images.githubusercontent.com/54731898/104768737-7ba26400-57b1-11eb-9d2a-a652243a2c62.PNG)  
 다음과 같은 과정을 통해 attention mechanism을 구현하고, decoder에서 output을 뽑아낼 때 사용한다.
@@ -58,4 +60,7 @@ CER(Character Error Rate)이 가장 낮은 것을 확인 할 수 있다.
 ![g](https://user-images.githubusercontent.com/54731898/104768799-95dc4200-57b1-11eb-913f-68e62d1dfd6a.PNG)  
 CTC와 Attention 방법보다 MTL 방법이 더 빠르게 학습해나가는 것을 확인 할 수 있다.
 
+![h](https://user-images.githubusercontent.com/54731898/104813032-d5566d00-5849-11eb-83d4-953a99d055a8.PNG)
+보통 음성인식이나 음성합성의 경우 alignment가 일직선인 경우가 많은데 
+Attention만 사용한 방법보다 MTL 방법이 더 뚜렷하게 나타나는 것을 확인 할 수 있다.
 
