@@ -13,7 +13,7 @@ End-to-End 음성인식 방법은 두 가지로 나눌 수 있다.
 두 번째는 Attention-based encoder-decoder 방법 이다.  
 
 두 번째 방법으로 실시간 음성인식을 할 때, noise 때문에 alignment를 잘못 예측하기도 하고  
-input sequence가 길 때, alignment를 잘못 예측하여 학습이 어려울 때도 있다. 
+input sequence가 길 때, alignment를 잘못 예측하여 초기 학습이 어려울 때도 있다. 
 이러한 misalignment 문제를 해결하기 위해 joint CTC-attention model을 제안한다.
 핵심은 CTC와 attention model이 encoder부분을 공유하고 있는 것이다.
 forward-backward 알고리즘을 사용하는 CTC loss를 통해 alignment 문제를 해결하여 성능을 높일 수 있다고 본 논문은 말하고 있다.
