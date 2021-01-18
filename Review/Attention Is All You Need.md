@@ -39,7 +39,8 @@ Decoder 또한 동일한 6개의 레이어를 쌓은 형태이고 각 레이어�
 이렇게 동일한 6개의 레이어를 거친 후에 linear layer를 거치고 softmax 계산을 하여 아웃풋 확률 값을 얻을 수 있다.
 
 ![f](https://user-images.githubusercontent.com/54731898/104893643-056f4e80-59b7-11eb-91ee-21e6fda9f8fb.PNG)
-![g](https://user-images.githubusercontent.com/54731898/104893692-16b85b00-59b7-11eb-9725-93be09df1cd8.PNG)  
+![g](https://user-images.githubusercontent.com/54731898/104893692-16b85b00-59b7-11eb-9725-93be09df1cd8.PNG)
+
 Residual Connection을 하는 이유는 ?  
 Residual Connection(다른 말로 skip connection)을 하면 y = x + F(x) 형태가 된다.
 위의 사진 처럼 f2 레이어가 잘 작동하지 않아도 여러 가지 방법으로 그래디언트가 
@@ -51,7 +52,7 @@ robust한 구조를 만들 수 있다.
 https://arxiv.org/pdf/1605.06431.pdf 을 참고하시면 좋을 것 같습니다.
 
 
-![h](https://user-images.githubusercontent.com/54731898/104893694-17e98800-59b7-11eb-84d9-518cfc1f3bb8.PNG)  
+![h](https://user-images.githubusercontent.com/54731898/104893694-17e98800-59b7-11eb-84d9-518cfc1f3bb8.PNG)    
 Layer Normalization을 하는 이유는 ?
 이미지와 다르게 자연어에서는 입력 시퀀스가 매번 다르기 때문에 Batch Normalization보다 
 Layer Normalization을 해주는 것이 더 좋다.
@@ -59,7 +60,7 @@ Layer Normalization을 해주는 것이 더 좋다.
 또한 batch normalization을 사용했을 때, test sequence가 train sequence보다 길다면 문제가 발생할 수 있다.
 하지만 layer normalization을 사용하면 문장마다 계산하기 때문에 길이가 더 긴 문장이 와도 문제가 발생하지 않는 것을 알 수 있다.
 
-더 자세한 내용은 Layer Normalization 논문 https://arxiv.org/pdf/1607.06450.pdf 을 참고하시거나,
+더 자세한 내용은 Layer Normalization 논문 https://arxiv.org/pdf/1607.06450.pdf 을 참고하시거나,  
 잘 정리된 이 [링크](https://zhangtemplar.github.io/normalization/)를 참고하시면 좋을 것 같습니다.
 
 
