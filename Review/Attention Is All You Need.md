@@ -111,9 +111,9 @@ RNN과 CNN을 사용하지 않기 때문에 위치에 대한 정보도 알려주
 
 ## 4. Why Self-Attention
 ---
-첫 번째 장점은 layer 마다 전체적인 계산 복잡도가 줄어든다.
-두 번째 장점은 recurrence를 아예 배제하여 병렬 처리가 가능하다.
-세 번째 장점은 긴 문장에 대해서도 잘 처리할 수 있다.
+첫 번째 장점은 layer 마다 전체적인 계산 복잡도가 줄어든다.  
+두 번째 장점은 recurrence를 아예 배제하여 병렬 처리가 가능하다.  
+세 번째 장점은 긴 문장에 대해서도 잘 처리할 수 있다.  
 
 ![i](https://user-images.githubusercontent.com/54731898/104893699-191ab500-59b7-11eb-86a4-6c7a6c5b1661.PNG)  
 n은 시퀀스 길이, d는 dimension, k는 convolution의 kernel size이다.
@@ -135,7 +135,7 @@ label smoothing 값으로 0.1을 사용하였다.
 
 ## 6. Results
 ![j](https://user-images.githubusercontent.com/54731898/104893706-1a4be200-59b7-11eb-85a2-56e078225c22.PNG)  
-트랜스포머의 base model로도 State-Of-The-Art (SOTA) 정도의 성능을 낼 수 있었다.
+트랜스포머의 base model로도 State-Of-The-Art (SOTA) 정도의 성능을 낼 수 있었다.  
 또한 학습 시간이 훨씬 짧은 것도 알 수 있다.
 
 
