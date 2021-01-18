@@ -115,8 +115,9 @@ RNN과 CNN을 사용하지 않기 때문에 위치에 대한 정보도 알려주
 두 번째 장점은 recurrence를 아예 배제하여 병렬 처리가 가능하다.  
 세 번째 장점은 긴 문장에 대해서도 잘 처리할 수 있다.  
 
-![i](https://user-images.githubusercontent.com/54731898/104893699-191ab500-59b7-11eb-86a4-6c7a6c5b1661.PNG)  
-n은 시퀀스 길이, d는 dimension, k는 convolution의 kernel size이다.
+![i](https://user-images.githubusercontent.com/54731898/104893699-191ab500-59b7-11eb-86a4-6c7a6c5b1661.PNG)   
+
+n은 시퀀스 길이, d는 dimension, k는 convolution의 kernel size이다.  
 일반적으로 n이 d보다 작기 때문에 self-attention이 RNN보다 복잡도가 더 낮다.
 또한 RNN은 순차적으로 하나하나씩 처리하기 때문에 시퀀스 길이만큼 필요하지만,
 병렬적인 처리가 가능한 self-attention은 한번에 처리하는 것을 알 수 있다.
