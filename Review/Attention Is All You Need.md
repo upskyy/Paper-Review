@@ -14,7 +14,7 @@ Transformer는 recurrence를 아예 배제하고 전적으로 attention mechanis
 
 ## 2. Background
 ---
-self-attention은 자기 문장 스스로에게 attention을 수행하여 문장의 표현들을 학습할 수 있도록 하는 것이다. intra-attention 이라고도 불린다.
+self-attention은 자기 문장 스스로에게 attention을 수행하여 문장의 표현들을 학습할 수 있도록 하는 것이다. intra-attention 이라고도 불린다.  
 최근에 나온 GPT나 BERT도 본 논문에서 제안한 transformer architecture를 따르고 있다.
 
 ## 3. Model Architecture
