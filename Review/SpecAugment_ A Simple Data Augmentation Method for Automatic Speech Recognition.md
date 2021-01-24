@@ -65,7 +65,7 @@ learning rate schedule은 성능을 결정하는데 매우 중요한 요소 라�
 논문에서 사용한 3개의 learning rate schedule 파라미터를 정리한 사진입니다.
 
 ### Label Smoothing
-label smoothing이란 hard vector를 soft vector로 바꾸어주는 것입니다. 예를들어, 올바른 label이 1 이였다면 0.9로 낮추어 조금 덜 확실하게 학습을 하는 것입니다.
+label smoothing이란 hard vector를 soft vector로 바꾸어주는 것입니다. 예를들어, 올바른 label이 1 이였다면 0.9로 낮추어 조금 더 불확실하게 학습을 하는 것입니다.
 데이터 정규화(regularization) 테크닉 중에 하나로, 간단한 방법이면서도 모델의 일반화 성능을 높여줍니다.
 더 자세한 내용은 [When Does Label Smoothing Help?](https://arxiv.org/pdf/1906.02629.pdf) 논문을 참고하시면 좋겠습니다.
 
