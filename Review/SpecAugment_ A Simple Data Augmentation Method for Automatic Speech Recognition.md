@@ -87,7 +87,8 @@ SpecAugment를 적용한 모델이 압도적인 성능을 보여주었습니다.
 ## 5. Discussion
 ---
 ### Time warping contributes, but is not a major factor in improving performance.
-time warping, time masking, frequency masking 중에서 time warping은 계산이 많은 것에 비해 성능 개선에는 영향력이 별로 없습니다. 따라서 모든 augmentation 방법을 할 수 없다면 time warping을 배제하는 것이 좋습니다. 
+time warping, time masking, frequency masking 중에서 time warping은 계산이 많은 것에 비해 성능 개선에는 영향력이 별로 없습니다. 따라서 모든 augmentation 방법을 할 수 없다면 time warping을 배제하는 것이 좋습니다.
+
 ### Label smoothing introduces instability to training.
 Label smoothing과 augmentation을 함께 사용했을 때 눈에 띄는 결과를 보여주었다고 합니다.
 
