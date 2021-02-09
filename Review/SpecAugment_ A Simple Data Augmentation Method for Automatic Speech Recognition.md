@@ -100,6 +100,7 @@ Augmentation을 가장 많이 적용한 LD를 보시면 Training set에서 오�
 언더피팅을 해결하기 위해서는 더 깊고 더 넓은 모델로 긴 learning rate schedule과 함께 학습을 오래시키면 됩니다.
 
 ## 6. Conclusions
+---
 SpecAugment는 음성인식에서 오버피팅 문제를 언더피팅 문제로 바꾸었고, 
 큰 네트워크와 긴 학습 시간으로 좋은 결과를 얻었다.
 
