@@ -12,7 +12,8 @@ https://arxiv.org/pdf/1810.04805.pdf
 
 ## Introduction
 ---
-OpenAI GPT 같은 경우는 left-to-right 구조를 사용합니다. 즉, self-attention layers에서 이전 토큰의 정보들을 통해 다음 토큰을 예측합니다. 본 논문에서는 이러한 단방향성이 양방향의 정보들을 통합해야 하는 question answering 같은 태스크에 fine-tuning 어렵게 한다고 말하고 있습니다.  
+OpenAI GPT 같은 경우는 left-to-right 구조를 사용합니다. 즉, self-attention layers에서 이전 토큰의 정보들을 통해 다음 토큰을 예측합니다.  
+본 논문에서는 이러한 단방향성이 양방향의 정보들을 통합해야 하는 question answering 같은 태스크에 fine-tuning을 어렵게 한다고 말하고 있습니다.  
 따라서 masked language model(MLM)을 사용하여 단방향성의 제약을 해결합니다.  
 MLM 방법은 input의 일부 토큰을 랜덤으로 마스킹하고 양방향의 토큰 정보들을 통해 마스킹 된 토큰의 id를 예측하는 방법입니다.  
 이외에도 next sentence prediction(NSP)방법을 사용합니다.  
