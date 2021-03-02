@@ -1,5 +1,5 @@
 # BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
-https://arxiv.org/pdf/1810.04805.pdf
+https://arxiv.org/pdf/1810.04805.pdf  
 ![a](https://user-images.githubusercontent.com/54731898/109606223-b0078f00-7b69-11eb-8fea-a0562c4ab7c4.jpg)  
 
 
@@ -28,8 +28,8 @@ Pre-training에서는 unlabeled data로 학습을 합니다.
 Fine-tuning에서는 처음에 사전 학습된 모델의 파라미터로 초기화된 후, labeled data로 fine-tuning을 합니다.  
 
 ### Model Architecture  
-L : layer 개수
-H : 히든 디멘션
+L : layer 개수  
+H : 히든 디멘션  
 A : 셀프 어텐션 헤드 개수  
 
 ||L|H|A|Total Parameters|
