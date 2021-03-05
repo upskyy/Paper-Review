@@ -39,15 +39,18 @@ Layernorm을 앞단에 주어 학습을 좀 더 원활하게 하도록 하였고
 ### 2.2. Convolution Module
 ---
 ![b](https://user-images.githubusercontent.com/54731898/110105275-878ec780-7deb-11eb-8145-742562fd34d5.PNG)  
+
 - #### Pointwise Convolution
 ![d](https://user-images.githubusercontent.com/54731898/110117323-0986ec80-7dfc-11eb-840b-8dbf9dd53fcd.PNG)  
 
 다른 말로는 1 x 1 Convolution으로 불리며, output의 크기가 변하지 않기 때문에 channel의 수를 조절하고 싶을 때 사용합니다.  
 
+
 - #### GLU Activation
 ![e](https://user-images.githubusercontent.com/54731898/110118051-1d7f1e00-7dfd-11eb-9856-c429d547d54d.PNG)  
 이 함수는 입력의 절반에 시그모이드 함수를 취한 것과 나머지 입력의 절반을 가지고 pointwise 곱을 계산합니다.  
 따라서 출력 값의 차원은 입력 값의 차원의 절반이 됩니다.  
+
 
 - #### Swish Activation
 ![f](https://user-images.githubusercontent.com/54731898/110118516-d5acc680-7dfd-11eb-9bb7-be6a204181ce.PNG)  
@@ -57,7 +60,8 @@ Layernorm을 앞단에 주어 학습을 좀 더 원활하게 하도록 하였고
 
 - #### Depthwise Convolution
 ![h](https://user-images.githubusercontent.com/54731898/110119173-c2e6c180-7dfe-11eb-8136-161f39feea7c.PNG)  
-각 채널마다 필터가 존재하여, input과 output의 channel이 같게 됩니다.
+각 채널마다 필터가 존재하여, input과 output의 channel이 같게 됩니다.  
+
 
 
 ## 2.3. Feed Forward Module
@@ -68,7 +72,8 @@ Layernorm을 앞단에 주어 학습을 좀 더 원활하게 하도록 하였고
 
 ## 2.4. Conformer Block
 ---
-![z](https://user-images.githubusercontent.com/54731898/110121200-72249800-7e01-11eb-9e9d-6a4f112b9014.PNG)
+![z](https://user-images.githubusercontent.com/54731898/110121200-72249800-7e01-11eb-9e9d-6a4f112b9014.PNG)  
+
 앞서 말씀드린 샌드위치 구조는 [Macaron-Net](https://arxiv.org/abs/1906.02762)에서 영감을 받았다고 합니다.  
 절반의 residual connection과 함께 샌드위치 구조의 feed-forward 모듈이 single feed-forward 모듈에 비해 더 좋은 성능을 보인다고 말하고 있습니다.  
 
@@ -99,9 +104,11 @@ Depthwise convolution 대신에 lightweight convolution으로 바꾸어 보았�
 마지막으로 인풋을 두 개로 나누어 하나는 MHSA 모듈로, 나머지 하나는 convolution 모듈로 보내고 결과값들을 합치는 방법으로 진행해보았습니다.  
 표는 세 가지 경우에 대한 결과 값입니다.
 
+
 ### Macaron Feed Forward Modules  
 ![Q](https://user-images.githubusercontent.com/54731898/110124140-178d3b00-7e05-11eb-8ad1-b138d1fbf55a.PNG)  
 Conformer와 single FFN 그리고 full-step residual의 결과 값들을 비교한 표 입니다.
+
 
 ### Number of Attention Heads  
 ![bb](https://user-images.githubusercontent.com/54731898/110126079-65a33e00-7e07-11eb-9f1d-1e89e068acbe.PNG)  
@@ -112,6 +119,7 @@ Attention 헤드 수를 증가시키면서 실험한 결과, 16 까지는 accura
 ![cc](https://user-images.githubusercontent.com/54731898/110126085-663bd480-7e07-11eb-82a7-560b9adab040.PNG)  
 
 Large 모델에서 커널 사이즈를 3, 7, 17, 32, 65로 하여 실험한 결과, 32가 가장 적합하다고 말하고 있습니다.  
+
 
 ## Conclusion
 ---
