@@ -39,22 +39,23 @@ Layernorm을 앞단에 주어 학습을 좀 더 원활하게 하도록 하였고
 ### 2.2. Convolution Module
 ---
 ![b](https://user-images.githubusercontent.com/54731898/110105275-878ec780-7deb-11eb-8145-742562fd34d5.PNG)  
-- ##### Pointwise Convolution
-![d](https://user-images.githubusercontent.com/54731898/110117323-0986ec80-7dfc-11eb-840b-8dbf9dd53fcd.PNG)
+- #### Pointwise Convolution
+![d](https://user-images.githubusercontent.com/54731898/110117323-0986ec80-7dfc-11eb-840b-8dbf9dd53fcd.PNG)  
+
 다른 말로는 1 x 1 Convolution으로 불리며, output의 크기가 변하지 않기 때문에 channel의 수를 조절하고 싶을 때 사용합니다.  
 
-- ##### GLU Activation
+- #### GLU Activation
 ![e](https://user-images.githubusercontent.com/54731898/110118051-1d7f1e00-7dfd-11eb-9856-c429d547d54d.PNG)  
 이 함수는 입력의 절반에 시그모이드 함수를 취한 것과 나머지 입력의 절반을 가지고 pointwise 곱을 계산합니다.  
 따라서 출력 값의 차원은 입력 값의 차원의 절반이 됩니다.  
 
-- ##### Swish Activation
+- #### Swish Activation
 ![f](https://user-images.githubusercontent.com/54731898/110118516-d5acc680-7dfd-11eb-9bb7-be6a204181ce.PNG)  
 ![g](https://user-images.githubusercontent.com/54731898/110118690-14db1780-7dfe-11eb-932c-152440aaad24.PNG)  
 시그모이드 함수에 x를 곱한 식 입니다.  
 
 
-- ##### Depthwise Convolution
+- #### Depthwise Convolution
 ![h](https://user-images.githubusercontent.com/54731898/110119173-c2e6c180-7dfe-11eb-8136-161f39feea7c.PNG)  
 각 채널마다 필터가 존재하여, input과 output의 channel이 같게 됩니다.
 
