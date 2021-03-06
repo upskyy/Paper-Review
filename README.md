@@ -1,7 +1,7 @@
 # Paper-Review
  - Paper Review about Speech Recognition · NLP · Speech Synthesis  
  
- 
+  
 |Year|Paper|Links|
 |:---:|:---:|:---:|
 |`2006/06`|`Connectionist Temporal Classification: Labelling UnsegmentedSequence Data with Recurrent Neural Networks`|[Paper](https://www.cs.toronto.edu/~graves/icml_2006.pdf) [Review](https://github.com/hasangchun/Paper-Review/blob/main/Review/Connectionist%20Temporal%20Classification.pdf)|
