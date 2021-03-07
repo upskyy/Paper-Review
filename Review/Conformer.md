@@ -60,8 +60,8 @@ Layernorm을 앞단에 주어 학습을 좀 더 원활하게 하도록 하였고
 
 - #### Depthwise Convolution
 ![h](https://user-images.githubusercontent.com/54731898/110119173-c2e6c180-7dfe-11eb-8136-161f39feea7c.PNG)  
-각 채널마다 필터가 존재하여, input과 output의 channel이 같게 됩니다.  
-
+각 채널마다 필터가 존재하여, 각 채널 고유의 Spatial 정보만을 학습하게 됩니다.  
+또한 결과적으로 입력 채널 수 만큼 그룹을 나눈 Grouped Convolution과 같습니다.  
 
 
 ## 2.3. Feed Forward Module
